@@ -1,0 +1,32 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Windows DualSense",
+	"Description": "InputDevice plugin for the PS5 DualSense controller in Windows",
+	"Category": "Input Devices",
+	"CreatedBy": "BBAGWANG (GyuTae Hong)",
+	"CreatedByURL": "http://bbagwang.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+
+	"SupportedTargetPlatforms": [
+		"Win64"
+	],
+
+	"Modules": [
+		{
+			"Name": "WinDualSense",
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		}
+	]
+}
