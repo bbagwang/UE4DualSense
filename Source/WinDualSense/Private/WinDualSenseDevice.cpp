@@ -28,7 +28,6 @@ FWinDualSenseDevice::FWinDualSenseDevice(const TSharedRef< FGenericApplicationMe
 	Buttons.Add(EDualSenseButtonType::TRIGGER_RIGHT, FDualSenseButtonData(FGamepadKeyNames::RightTriggerThreshold));
 
 	Buttons.Add(EDualSenseButtonType::LEFT_STICK_PUSH, FDualSenseButtonData(FGamepadKeyNames::LeftThumb));
-
 	Buttons.Add(EDualSenseButtonType::RIGHT_STICK_PUSH, FDualSenseButtonData(FGamepadKeyNames::RightThumb));
 
 	Buttons.Add(EDualSenseButtonType::SELECT, FDualSenseButtonData(FGamepadKeyNames::SpecialLeft));
@@ -45,7 +44,7 @@ FWinDualSenseDevice::FWinDualSenseDevice(const TSharedRef< FGenericApplicationMe
 	Analogs.Add(EDualSenseAnalogType::LEFT_STICK_X, FDualSenseAnalogData(FGamepadKeyNames::LeftAnalogX));
 	Analogs.Add(EDualSenseAnalogType::LEFT_STICK_Y, FDualSenseAnalogData(FGamepadKeyNames::LeftAnalogY));
 	Analogs.Add(EDualSenseAnalogType::RIGHT_STICK_X, FDualSenseAnalogData(FGamepadKeyNames::RightAnalogX));
-	Analogs.Add(EDualSenseAnalogType::RIGHT_STICK_X, FDualSenseAnalogData(FGamepadKeyNames::RightAnalogY));
+	Analogs.Add(EDualSenseAnalogType::RIGHT_STICK_Y, FDualSenseAnalogData(FGamepadKeyNames::RightAnalogY));
 	Analogs.Add(EDualSenseAnalogType::LEFT_TRIGGER, FDualSenseAnalogData(FGamepadKeyNames::LeftTriggerAnalog));
 	Analogs.Add(EDualSenseAnalogType::RIGHT_TRIGGER, FDualSenseAnalogData(FGamepadKeyNames::RightTriggerAnalog));
 
@@ -86,7 +85,7 @@ void FWinDualSenseDevice::SendControllerEvents()
 
 void FWinDualSenseDevice::SetMessageHandler(const TSharedRef<FGenericApplicationMessageHandler>& InMessageHandler)
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("SetMessageHandler"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("SetMessageHandler"));
 	MessageHandler = InMessageHandler;
 }
 
@@ -98,44 +97,43 @@ bool FWinDualSenseDevice::Exec(UWorld* InWorld, const TCHAR* Cmd, FOutputDevice&
 
 void FWinDualSenseDevice::SetChannelValue(int32 ControllerId, FForceFeedbackChannelType ChannelType, float Value)
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("SetChannelValue"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("SetChannelValue"));
 }
 
 void FWinDualSenseDevice::SetChannelValues(int32 ControllerId, const FForceFeedbackValues& values)
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("SetChannelValues"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("SetChannelValues"));
 }
 
 bool FWinDualSenseDevice::SupportsForceFeedback(int32 ControllerId)
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("SupportsForceFeedback"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("SupportsForceFeedback"));
 	return true;
 }
 
 void FWinDualSenseDevice::SetLightColor(int32 ControllerId, FColor Color)
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("SetLightColor"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("SetLightColor"));
 }
 
 void FWinDualSenseDevice::ResetLightColor(int32 ControllerId)
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("ResetLightColor"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("ResetLightColor"));
 }
 
 void FWinDualSenseDevice::SetDeviceProperty(int32 ControllerId, const FInputDeviceProperty* Property)
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("SetDeviceProperty"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("SetDeviceProperty"));
 }
 
 class IHapticDevice* FWinDualSenseDevice::GetHapticDevice()
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("GetHapticDevice"));
+	//UE_LOG(LogWinDualSense, Warning, TEXT("GetHapticDevice"));
 	return nullptr;
 }
 
 bool FWinDualSenseDevice::IsGamepadAttached() const
 {
-	UE_LOG(LogWinDualSense, Warning, TEXT("IsGamepadAttached"));
 	return true;
 }
 
